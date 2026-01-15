@@ -20,6 +20,7 @@
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false">Тема</button>
     </div>
   </header>
 
@@ -47,5 +48,28 @@
   <footer class="site-footer">
     <p>CS2 SkinLab — учебный проект по основам верстки.</p>
   </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.querySelector(".theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+      const initialTheme = storedTheme === "dark" ? "dark" : "light";
+
+      root.dataset.theme = initialTheme;
+      root.style.colorScheme = initialTheme;
+
+      if (toggle) {
+        toggle.setAttribute("aria-pressed", String(initialTheme === "dark"));
+        toggle.addEventListener("click", () => {
+          const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
+          root.dataset.theme = nextTheme;
+          root.style.colorScheme = nextTheme;
+          localStorage.setItem("theme", nextTheme);
+          toggle.setAttribute("aria-pressed", String(nextTheme === "dark"));
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
