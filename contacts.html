@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог скинов CS2 — Контакты</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        CS2 SkinLab
+        <span>Каталог скинов Steam</span>
+      </div>
+      <div class="header-actions">
+        <nav class="main-nav" aria-label="Главное меню">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a class="active" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button">Светлая тема</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Свяжитесь с нами</h1>
+    <p>Если хотите предложить новый скин или задать вопрос, заполните форму ниже.</p>
+  </section>
+
+  <main>
+    <section class="info-section">
+      <article>
+        <h2>Контактная информация</h2>
+        <ul>
+          <li>ФИО: <strong>Иванов Иван Иванович</strong> (замените на свои данные)</li>
+          <li>Группа: <strong>ГРУППА-000</strong> (замените на свои данные)</li>
+          <li>Телефон: <strong>+7 (900) 123-45-67</strong></li>
+        </ul>
+      </article>
+      <article>
+        <h2>Форма обратной связи</h2>
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Ваше имя</label>
+          <input id="name" name="name" type="text" placeholder="Введите имя" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="example@mail.com" required>
+
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" rows="4" placeholder="Ваше сообщение" required></textarea>
+
+          <button type="submit">Отправить</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Мы отвечаем в течение 1-2 дней. Спасибо за интерес к проекту!</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
