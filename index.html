@@ -1166,22 +1166,6 @@
     })();
 
     (() => {
-      const glowColors = [
-        "236 72 153",
-        "168 85 247",
-        "239 68 68",
-        "250 204 21",
-        "34 197 94"
-      ];
-      const skinImages = document.querySelectorAll(".skin-card img");
-
-      skinImages.forEach((img) => {
-        const randomColor = glowColors[Math.floor(Math.random() * glowColors.length)];
-        img.style.setProperty("--glow-color", randomColor);
-      });
-    })();
-
-    (() => {
       const pageButtons = Array.from(document.querySelectorAll(".pagination-button"));
       const cards = Array.from(document.querySelectorAll(".catalog-grid .skin-card"));
 
