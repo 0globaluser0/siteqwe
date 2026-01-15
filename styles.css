@@ -238,25 +238,31 @@ main {
   margin-bottom: 32px;
 }
 
-.pagination a {
+.pagination-button {
   padding: 8px 14px;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--surface);
+  color: inherit;
+  cursor: pointer;
   transition: 0.2s ease;
 }
 
-.pagination a:hover,
-.pagination a:focus-visible {
+.pagination-button:hover,
+.pagination-button:focus-visible {
   border-color: var(--accent);
   color: var(--accent);
   background: var(--accent-soft);
 }
 
-.pagination .current {
+.pagination-button.is-active {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
+}
+
+.is-hidden {
+  display: none;
 }
 
 .info-section {
